@@ -6,7 +6,7 @@
 #    By: felcaue- <felcaue-@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/02/03 19:15:02 by felcaue-          #+#    #+#              #
-#    Updated: 2022/02/17 19:10:30 by felcaue-         ###   ########.fr        #
+#    Updated: 2022/02/17 20:38:58 by felcaue-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,6 +15,7 @@ N_CLIENT	=	client
 
 CC			=	gcc
 CFLAGS		=	-Wall -Wextra -Werror
+RM			=	/bin/rm -rf
 
 DIRECTORY	=	Objs_Minitalk
 
