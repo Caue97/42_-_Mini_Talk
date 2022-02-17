@@ -6,7 +6,7 @@
 #    By: felcaue- <felcaue-@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/02/03 19:15:02 by felcaue-          #+#    #+#              #
-#    Updated: 2022/02/17 18:54:18 by felcaue-         ###   ########.fr        #
+#    Updated: 2022/02/17 19:10:30 by felcaue-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -63,10 +63,12 @@ clean:
 			$(RM) $(DIRECTORY)
 
 fclean:		clean
-			$(RM) $(N_CLIENT) $(N_SERVER)
+			$(RM) $(N_CLIENT) 
+			$(RM) $(N_SERVER)
 
 my_clean:	clean
-			$(RM) $(N_CLIENT) $(N_SERVER)
+			$(RM) $(N_CLIENT)
+			$(RM) $(N_SERVER)
 			clear
 
 re:			fclean all
