@@ -6,12 +6,12 @@
 /*   By: felcaue- <felcaue-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/04 18:13:22 by felcaue-          #+#    #+#             */
-/*   Updated: 2022/02/17 16:02:20 by felcaue-         ###   ########.fr       */
+/*   Updated: 2022/02/17 18:07:52 by felcaue-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef MINITALK
-# define MINITALK
+#ifndef MINITALK_H
+# define MINITALK_H
 
 # include <stdlib.h>
 # include <unistd.h>
