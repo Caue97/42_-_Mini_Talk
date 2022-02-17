@@ -6,7 +6,7 @@
 /*   By: felcaue- <felcaue-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/04 18:13:22 by felcaue-          #+#    #+#             */
-/*   Updated: 2022/02/17 18:07:52 by felcaue-         ###   ########.fr       */
+/*   Updated: 2022/02/17 19:06:48 by felcaue-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -88,14 +88,7 @@ int			eternal_return(char *base, int nbr_final[], int counter);
  */
 char		*ft_binary_itoa(int numb);
 
-/**
- * @brief Auxialiary Function to function 'BINARY_ITOA', puts the rest of 
- * the zero/s in place
- * 
- * @param str The char to receive zeros
- * @return The char with the zeros
- */
-char		*put_zero(char *str);
+void		convert(int c, char *str, long int i);
 
 //utils01.c ============================================
 
@@ -131,7 +124,7 @@ int			ft_atoi(const char *to_convert);
  * @param f_negative_o If is negative
  * @return If there is overflow
  */
-static int	check_overflow(int number_o, int f_negative_o);
+int			check_overflow(int number_o, int f_negative_o);
 
 /**
  * @brief Checks the size of a string
@@ -159,7 +152,7 @@ char		*ft_itoa(int n);
  * @param d_str The 'malloc' string 
  * @param length The size of the number
  */
-static void	convt_to_number(int n_conv, char *d_str, long int length);
+void		convt_to_number(int n_conv, char *d_str, long int length);
 
 /**
  * @brief Copies a *char, or part of it, to a new *char that was passed 
@@ -201,5 +194,14 @@ char		*ft_strdup(const char *strin_g);
  * @return The copied string 
  */
 void		*ft_memcpy(char *copy, const void *original, size_t length);
+
+/**
+ * @brief Auxialiary Function to function 'BINARY_ITOA', puts the rest of 
+ * the zero/s in place
+ * 
+ * @param str The char to receive zeros
+ * @return The char with the zeros
+ */
+char		*put_zero(char *str);
 
 #endif

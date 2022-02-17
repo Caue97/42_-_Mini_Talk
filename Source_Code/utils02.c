@@ -6,7 +6,7 @@
 /*   By: felcaue- <felcaue-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/16 20:49:54 by felcaue-          #+#    #+#             */
-/*   Updated: 2022/02/17 15:45:08 by felcaue-         ###   ########.fr       */
+/*   Updated: 2022/02/17 19:06:25 by felcaue-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,7 @@ char	*ft_itoa(int n)
 	return (ret_strng);
 }
 
-static void	convt_to_number(int n_conv, char *d_str, long int length)
+void	convt_to_number(int n_conv, char *d_str, long int length)
 {
 	unsigned int	n_holder;
 

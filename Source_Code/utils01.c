@@ -6,7 +6,7 @@
 /*   By: felcaue- <felcaue-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/11 20:08:11 by felcaue-          #+#    #+#             */
-/*   Updated: 2022/02/16 20:49:14 by felcaue-         ###   ########.fr       */
+/*   Updated: 2022/02/17 19:06:40 by felcaue-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,7 +67,7 @@ int	ft_atoi(const char *to_convert)
 	return (number);
 }
 
-static int	check_overflow(int number_o, int f_negative_o)
+int	check_overflow(int number_o, int f_negative_o)
 {
 	unsigned int	num_for_check;
 

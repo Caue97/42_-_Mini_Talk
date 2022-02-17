@@ -6,7 +6,7 @@
 /*   By: felcaue- <felcaue-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/16 21:02:28 by felcaue-          #+#    #+#             */
-/*   Updated: 2022/02/17 15:41:30 by felcaue-         ###   ########.fr       */
+/*   Updated: 2022/02/17 19:01:34 by felcaue-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -108,22 +108,17 @@ char	*ft_binary_itoa(int numb)
 	return (send);
 }
 
-char	*put_zero(char *str)
+void	convert(int c, char *str, long int i)
 {
-	int		counter;
-	char	*aux;
-	char	*send;
+	unsigned int	nbr;
 
-	counter = ft_strlen(str);
-	if (counter == 7)
+	nbr = c;
+	if (c < 0)
 	{
-		aux = "0";
-		send = ft_strjoin(aux, str);
+		str[0] = '-';
+		nbr = -nbr;
 	}
-	else if (counter == 6)
-	{
-		aux = "00";
-		send = ft_strjoin(aux, str);
-	}
-	return (send);
+	if (nbr >= 10)
+		convert((nbr / 10), str, (i - 1));
+	str[i] = (nbr % 10) + '0';
 }
