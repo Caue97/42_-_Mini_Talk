@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   mt_binary.c                                        :+:      :+:    :+:   */
+/*   utils_binary.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: felcaue- <felcaue-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/16 21:02:28 by felcaue-          #+#    #+#             */
-/*   Updated: 2022/02/17 13:29:01 by felcaue-         ###   ########.fr       */
+/*   Updated: 2022/02/17 15:41:30 by felcaue-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -80,4 +80,50 @@ int	eternal_return(char *base, int nbr_final[], int counter)
 	counter = ft_atoi(holder_02);
 	free (holder_02);
 	return (counter);
+}
+
+char	*ft_binary_itoa(int numb)
+{
+	char		*str;
+	long int	binary_og;
+	long int	count;
+	char		*send;
+
+	binary_og = numb;
+	count = 0;
+	if (binary_og <= 0)
+		count++;
+	while (binary_og)
+	{
+		binary_og = (binary_og / 10);
+		count++;
+	}
+	str = malloc(sizeof(char) * (count + 1));
+	if (!str)
+		return (NULL);
+	str[count] = 0;
+	convert (numb, str, (count - 1));
+	send = put_zero(str);
+	free (str);
+	return (send);
+}
+
+char	*put_zero(char *str)
+{
+	int		counter;
+	char	*aux;
+	char	*send;
+
+	counter = ft_strlen(str);
+	if (counter == 7)
+	{
+		aux = "0";
+		send = ft_strjoin(aux, str);
+	}
+	else if (counter == 6)
+	{
+		aux = "00";
+		send = ft_strjoin(aux, str);
+	}
+	return (send);
 }

@@ -6,7 +6,7 @@
 /*   By: felcaue- <felcaue-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/04 18:21:38 by felcaue-          #+#    #+#             */
-/*   Updated: 2022/02/17 13:39:50 by felcaue-         ###   ########.fr       */
+/*   Updated: 2022/02/17 15:40:51 by felcaue-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,7 +53,7 @@ void	send_signal(int binary, int pid)
 	char	*binary_char;
 	int		counter;
 
-	binary_char = ft_itoa(binary);
+	binary_char = ft_binary_itoa(binary);
 	counter = 0;
 	while (binary_char[counter])
 	{

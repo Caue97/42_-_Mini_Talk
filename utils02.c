@@ -6,7 +6,7 @@
 /*   By: felcaue- <felcaue-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/16 20:49:54 by felcaue-          #+#    #+#             */
-/*   Updated: 2022/02/16 20:58:27 by felcaue-         ###   ########.fr       */
+/*   Updated: 2022/02/17 15:45:08 by felcaue-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -79,26 +79,6 @@ size_t	ft_strlcpy(char *copy, const char *original, size_t size)
 	return (size_og);
 }
 
-char	*put_zero(char *str)
-{
-	int		i;
-	char	*aux;
-	char	*send;
-
-	i = ft_strlen(str);
-	if (i == 7)
-	{
-		aux = "0";
-		send = ft_strjoin(aux, str);
-	}
-	else if (i == 6)
-	{
-		aux = "00";
-		send = ft_strjoin(aux, str);
-	}
-	return (send);
-}
-
 char	*ft_strjoin(char const *s1, char const *s2)
 {
 	char	*strng_u;
@@ -125,4 +105,18 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	}
 	*strng_u = '\0';
 	return (destiny_ret);
+}
+
+char	*ft_strdup(const char *strin_g)
+{
+	size_t	length;
+	char	*new_cpy;
+
+	length = ft_strlen(strin_g) + 1;
+	new_cpy = malloc(length);
+	if (!new_cpy)
+	{
+		return (0);
+	}
+	return (ft_memcpy(new_cpy, strin_g, length));
 }

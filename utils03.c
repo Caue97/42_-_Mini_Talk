@@ -5,23 +5,27 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: felcaue- <felcaue-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/02/16 21:00:35 by felcaue-          #+#    #+#             */
-/*   Updated: 2022/02/16 21:01:10 by felcaue-         ###   ########.fr       */
+/*   Created: 2022/02/17 15:48:34 by felcaue-          #+#    #+#             */
+/*   Updated: 2022/02/17 15:53:00 by felcaue-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "minitalk.h"
 
-char	*ft_strdup(const char *strin_g)
+void	*ft_memcpy(char *copy, const void *original, size_t length)
 {
-	size_t	length;
-	char	*new_cpy;
+	unsigned char	*source;
+	unsigned char	*destiny;
 
-	length = ft_strlen(strin_g) + 1;
-	new_cpy = malloc(length);
-	if (!new_cpy)
+	if (original == NULL && copy == NULL)
 	{
-		return (0);
+		return (copy);
 	}
-	return (ft_memcpy(new_cpy, strin_g, length));
+	destiny = (unsigned char *) copy;
+	source = (unsigned char *) original;
+	while (length--)
+	{
+		*destiny++ = *source++;
+	}
+	return (copy);
 }
